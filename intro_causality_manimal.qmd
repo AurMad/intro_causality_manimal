@@ -1,6 +1,7 @@
 ---
 title: "Introduction to causality in epidemiology"
 author: "Aurélien Madouasse"
+date: "2023-11-08"
 institute: "Oniris VetAgroBio"
 format: 
   revealjs:
@@ -26,9 +27,9 @@ library(ggdag)
 
 ## Teaching material
 
-Link to the slides:
+Link to the slides: <https://aurmad.github.io/intro_causality_manimal/>
 
-Link to the code and data:
+Link to the code and data: <https://github.com/AurMad/intro_causality_manimal>
 
 # Why causality ?
 
