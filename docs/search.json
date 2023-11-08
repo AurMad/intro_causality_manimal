@@ -1,0 +1,261 @@
+[
+  {
+    "objectID": "intro_causality_manimal.html#teaching-material",
+    "href": "intro_causality_manimal.html#teaching-material",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Teaching material",
+    "text": "Teaching material\nLink to the slides:\nLink to the code and data:"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#bovid-19",
+    "href": "intro_causality_manimal.html#bovid-19",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Bovid-19",
+    "text": "Bovid-19\n\nBovid-19 is a (fictitious) viral disease of cows that very often results in death\nTwo treatments are used to prevent death\nThe effectiveness of these treatments is unknown\nThe following dataset was collected from 1000 cows treated with either one or the other treatment\n\n\n\n\n# A tibble: 1,000 × 4\n   anim_id   age treat death_obs\n     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;\n 1       1   5.5 A             0\n 2       2   8.4 B             0\n 3       3   8.9 A             1\n 4       4   8.5 B             1\n 5       5   7.2 B             0\n 6       6   9.8 B             1\n 7       7   7.2 A             0\n 8       8   9.9 B             1\n 9       9   7.3 B             0\n10      10   9.7 B             0\n# ℹ 990 more rows"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#effectiveness-of-treatments-a-and-b",
+    "href": "intro_causality_manimal.html#effectiveness-of-treatments-a-and-b",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Effectiveness of treatments A and B",
+    "text": "Effectiveness of treatments A and B\n\nFrom the data collected we would like to evaluate the effectiveness of each treatment\n\n\n\n\n\n\n\n\nExercise\n\n\n\nOpen the file called bovid19_1.xlsx in the data folder\nCalculate the proportion of deaths for each treatment\nWhich treatment is the most effective?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#effectiveness-of-treatments-a-and-b-1",
+    "href": "intro_causality_manimal.html#effectiveness-of-treatments-a-and-b-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Effectiveness of treatments A and B",
+    "text": "Effectiveness of treatments A and B\n\nYou should have obtained the following table:\n\n\n\n\n\n\n\nTreatment\nN Treated\nN deaths\nP deaths\n\n\n\n\nA\n370\n145\n0.392\n\n\nB\n630\n266\n0.422\n\n\n\n\n\n\n\nWhat do you conclude?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#effectiveness-of-treatments-according-to-age",
+    "href": "intro_causality_manimal.html#effectiveness-of-treatments-according-to-age",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Effectiveness of treatments according to age",
+    "text": "Effectiveness of treatments according to age\n\nWe suspect that the effectiveness of treatments may vary with age\nWe repeat our calculation, taking into account the age of the cows\n\n\n\n\n\n\n\n\nExercise\n\n\n\nIn the bovid19_1.xlsx file\nCategorise each animal as being \\(&lt; 5\\) or \\(\\geq 5\\) years of age\nCalculate the proportion of deaths for each treatment in each age category\nWhich treatment is the most effective?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#effectiveness-of-treatments-according-to-age-1",
+    "href": "intro_causality_manimal.html#effectiveness-of-treatments-according-to-age-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Effectiveness of treatments according to age",
+    "text": "Effectiveness of treatments according to age\n\nYou should have obtained the following table:\n\n\n\n\n\n\n\nTreatment\nAge\nN Treated\nN deaths\nP deaths\n\n\n\n\nA\n&lt; 5\n93\n4\n0.043\n\n\nB\n&lt; 5\n26\n0\n0.000\n\n\nA\n&gt; 5\n277\n141\n0.509\n\n\nB\n&gt; 5\n604\n266\n0.440\n\n\n\n\n\n\n\nWhat do you conclude?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#simpsons-paradox",
+    "href": "intro_causality_manimal.html#simpsons-paradox",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Simpson’s paradox",
+    "text": "Simpson’s paradox\n\n\n\nOverall, the proportion of deaths is lower for treatment A\nIn both age groups, the proportions of deaths are lower for treatment B\nThis is known as Simpson’s paradox\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLeft: example with 2 continuous variables \\(\\rightarrow\\) the direction of the association is reversed when you control for the character\n\n\n\n\nImage: https://analyticsindiamag.com/understanding-simpsons-paradox-and-its-impact-on-data-analytics/"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#why-causality-1",
+    "href": "intro_causality_manimal.html#why-causality-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Why causality ?",
+    "text": "Why causality ?\n\nIn order to improve health of individuals, and ultimately of populations, our objectives are to:\n\nimplement preventive measures, which involves identifying the causes leading to disease\nprovide effective curative treatments, which implies to quantify their causal impact on the course of disease\n\nStudying associations can be misleading!\nWe need specific concepts and tools to study causality."
+  },
+  {
+    "objectID": "intro_causality_manimal.html#koch-postulates-1",
+    "href": "intro_causality_manimal.html#koch-postulates-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Koch postulates (1)",
+    "text": "Koch postulates (1)\n\nWith the discovery of bacteria at the end of the XIX\\(^{th}\\) century, the question arose as to whether a given bacterium was the cause of a given disease.\nRobert Koch and Friedrich Loeffler proposed a set of 4 postulates that had to be fulfilled by a bacterium in order to conclude that it is causing a disease."
+  },
+  {
+    "objectID": "intro_causality_manimal.html#koch-postulates-2",
+    "href": "intro_causality_manimal.html#koch-postulates-2",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Koch postulates (2)",
+    "text": "Koch postulates (2)\n\nThe Koch postulates (from this Wikipedia page) are:\n\nThe microorganism must be found in abundance in all organisms suffering from the disease but should not be found in healthy organisms.\nThe microorganism must be isolated from a diseased organism and grown in pure culture.\nThe cultured microorganism should cause disease when introduced into a healthy organism.\nThe microorganism must be re-isolated from the inoculated, diseased experimental host and identified as being identical to the original specific causative agent.\n\nThese postulates had limitations (asymptomatic carriers, organisms difficult to grow…) and only applied to infectious agents"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#bradford-hill-criteria-1",
+    "href": "intro_causality_manimal.html#bradford-hill-criteria-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Bradford Hill criteria (1)",
+    "text": "Bradford Hill criteria (1)\n\nIn the first half of the XX\\(^{th}\\) century, questions arose regarding the causes of the increase in the incidence of lung cancer\nIn the 1950s, epidemiologists Austin Bradford Hill and Richard Doll ran a series of studies to identify the causes of this increase\nThey found a strong association between smoking habits and the probability of developing cancer\nThe interpretation of their results that smoking causes cancer was challenged.\nIn 1965, Bradford Hill proposed a set of 9 criteria to assess causal claims"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#bradford-hill-criteria-2",
+    "href": "intro_causality_manimal.html#bradford-hill-criteria-2",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Bradford Hill criteria (2)",
+    "text": "Bradford Hill criteria (2)\n\nThe 9 criteria (from Wikipedia):\n\nStrength (effect size): A small association does not mean that there is not a causal effect, though the larger the association, the more likely that it is causal.\nConsistency (reproducibility): Consistent findings observed by different persons in different places with different samples strengthens the likelihood of an effect.\nSpecificity: Causation is likely if there is a very specific population at a specific site and disease with no other likely explanation. The more specific an association between a factor and an effect is, the bigger the probability of a causal relationship.\nTemporality: The effect has to occur after the cause (and if there is an expected delay between the cause and expected effect, then the effect must occur after that delay)."
+  },
+  {
+    "objectID": "intro_causality_manimal.html#bradford-hill-criteria-3",
+    "href": "intro_causality_manimal.html#bradford-hill-criteria-3",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Bradford Hill criteria (3)",
+    "text": "Bradford Hill criteria (3)\n\nThe 9 criteria (from Wikipedia):\n\nBiological gradient (dose–response relationship): Greater exposure should generally lead to greater incidence of the effect. However, in some cases, the mere presence of the factor can trigger the effect. In other cases, an inverse proportion is observed: greater exposure leads to lower incidence.\nPlausibility: A plausible mechanism between cause and effect is helpful (but Hill noted that knowledge of the mechanism is limited by current knowledge).\nCoherence: Coherence between epidemiological and laboratory findings increases the likelihood of an effect. However, Hill noted that “lack of such evidence cannot nullify the epidemiological effect on associations”.\nExperiment: “Occasionally it is possible to appeal to experimental evidence”.\nAnalogy: The use of analogies or similarities between the observed association and any other associations."
+  },
+  {
+    "objectID": "intro_causality_manimal.html#problem-and-notation",
+    "href": "intro_causality_manimal.html#problem-and-notation",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Problem and notation",
+    "text": "Problem and notation\n\nAssume a disease and a treatment \\(A\\). We write:\n\n\\(A = 0\\) for individuals who did not receive the treatment\n\\(A = 1\\) for individuals who received the treatment\n\nAfter receiving the treatment, two things can happen:\n\n\\(Y = 0\\) for individuals who survive\n\\(Y = 1\\) for individuals who die\n\nWhat would it mean to say that treatment \\(A\\) has a causal effect on preventing death in individual \\(i\\)?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#individual-treatment-effect",
+    "href": "intro_causality_manimal.html#individual-treatment-effect",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Individual treatment effect",
+    "text": "Individual treatment effect\n\nWe define for individual \\(i\\) :\n\n\\(Y_i^{A = 1}\\) the outcome of receiving treatment \\(A\\)\n\\(Y_i^{A = 0}\\) the outcome of NOT receiving treatment \\(A\\)\n\nIf treatment \\(A\\) has a causal effect on the outcome of interest, then :\n\n\n\\[Y_i^{A=1} \\neq  Y_i^{A=0}\\]\n\n\nThe difference \\(Y_i^{A=1} - Y_i^{A=0}\\) is a measure of the individual treatment effect\nThe fundamental problem of causal inference is that only one of the potential outcomes can be observed \\(\\rightarrow\\) it is impossible to estimate \\(Y_i^{A=1} - Y_i^{A=0}\\)"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#individual-treatment-effect-1",
+    "href": "intro_causality_manimal.html#individual-treatment-effect-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Individual treatment effect",
+    "text": "Individual treatment effect\n\nIn the dataset below, we assume that we have observed the outcomes under both treatments\n\n\n\n\n# A tibble: 6 × 6\n  anim_id   age treat death_if_A death_if_B death_obs\n    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt;      &lt;int&gt;     &lt;dbl&gt;\n1       1   5.5 A              0          0         0\n2       2   8.4 B              1          0         0\n3       3   8.9 A              1          1         1\n4       4   8.5 B              1          1         1\n5       5   7.2 B              1          0         0\n6       6   9.8 B              1          1         1\n\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nOpen the file called bovid19_2.xlsx in the data folder\nCalculate the individual treatment effect for each animal\nCalculate the mean of the individual treatment effects\nWhat do you conclude?\nIn a real situation, what data could you have?\nHow would it change your conclusions?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#potential-outcome-framework",
+    "href": "intro_causality_manimal.html#potential-outcome-framework",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Potential outcome framework",
+    "text": "Potential outcome framework\n\nThe framework we use to conceptualise causality is called the potential outcome framework :\n\nThere is one potential outcome for each treatment modality\nOnly one of these treatment modalities can be observed in a given individual\nThis leads to the fundamental problem of causal inference : it is impossible to quantify the treatment effect in an individual\n\n\n\n\n\n\n\n\n\\(i\\)\nTreatment\n\\(Y^{a=0}\\)\n\\(Y^{a=1}\\)\n\n\n\n\n1\nA = 0\n0\n?\n\n\n2\nA = 1\n?\n0\n\n\n3\nA = 0\n1\n?\n\n\n4\nA = 1\n?\n1\n\n\n5\nA = 1\n?\n0"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#average-treatment-effect-definition",
+    "href": "intro_causality_manimal.html#average-treatment-effect-definition",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Average treatment effect: definition",
+    "text": "Average treatment effect: definition\n\nIf we can’t quantify the treatment effect in a single individual, maybe we can do it for a group of individuals\nThe Average Treatment Effect is defined as:\n\n\n\\[ATE = E[Y_i^{A=1} - Y_i^{A=0}]\\]\n\n\nwhere \\(E[.]\\) is an expectation (i.e. an average) in the group of interest.\nWe assume that:\n\n\n\\[ATE = E[Y_i^{A=1} - Y_i^{A=0}] = E[Y_i^{A=1}] - E[Y_i^{A=0}]\\]"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#factual-and-counterfactual-outcomes",
+    "href": "intro_causality_manimal.html#factual-and-counterfactual-outcomes",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Factual and counterfactual outcomes",
+    "text": "Factual and counterfactual outcomes\n\nIn the data we have:\n\n\\(Y_i|A_i=0\\): the value of \\(Y\\) in individuals who did not receive the treatment\n\n\\(Y_i|A_i=1\\): the value of \\(Y\\) in individuals who received the treatment\n\nIn probability notation \\(A|B\\) reads \\(A\\) given \\(B\\)\n\n\nFactual outcome:\n\n\\(Y^{A=0}_i|A_i=0\\) and \\(Y^{A=1}_i|A_i=1\\) are factual outcomes \\(\\rightarrow\\) the potential outcome was the one observed\n\nCounterfactual outcome:\n\n\\(Y^{A=1}_i|A_i=0\\) and \\(Y^{A=0}_i|A_i=1\\) are counterfactual outcomes \\(\\rightarrow\\) the potential outcome was not the one observed"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#estimating-an-average-treatment-effect",
+    "href": "intro_causality_manimal.html#estimating-an-average-treatment-effect",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Estimating an average treatment effect",
+    "text": "Estimating an average treatment effect\n\nWe could estimate the ATE by calculating :\n\n\n\\[E[Y|A=1] - E[Y|A=0]\\]\n\n\nwhere the symbol \\(|\\) means given that\nthe equation reads as follows: the expectation of \\(Y\\) given that (\\(|\\)) the animals received the treatment (\\(A=1)\\) minus the expectation of \\(Y\\) given that the animals did NOT receive the treatment (\\(A=0)\\)\nthis can be calculated by subtracting the proportion of individuals that survived in the untreated from the proportion of individuals that survived in the treated"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#estimating-an-average-treatment-effect-1",
+    "href": "intro_causality_manimal.html#estimating-an-average-treatment-effect-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Estimating an average treatment effect",
+    "text": "Estimating an average treatment effect\n\n\n\n\n\n\n\nExercise\n\n\n\nIn the file bovid19_2.xlsx\nCalculate \\(E[Y|A=1] - E[Y|A=0]\\)\nCompare what you obtain to the average of individual treatment effects calculated earlier\nAre the results different?\nWhy?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#representing-causality-with-dags-1",
+    "href": "intro_causality_manimal.html#representing-causality-with-dags-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Representing causality with DAGs",
+    "text": "Representing causality with DAGs\n\n\n\nOn the right is a representation of the causal relationships between age (\\(X\\)), treatment (\\(A\\)) and death (\\(Y\\))\nThis type of representation is called a Directed Acyclic Graph (DAG)\nEach variable (\\(X\\), \\(A\\), \\(Y\\)) is called a node\nNodes can be connected with edges\n\n\n\n\n\n\n\n\n\n\nThe edges have a direction (directed)\nFollowing directed edges, no path connects a node to itself (acyclic)\nDAGs can be used to represent causality: causal graphs"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#causality-in-dags",
+    "href": "intro_causality_manimal.html#causality-in-dags",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Causality in DAGs",
+    "text": "Causality in DAGs\n\nIn a causal DAG, causality is represented by a directed edge\n\nX causes Y"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#dags-building-blocks",
+    "href": "intro_causality_manimal.html#dags-building-blocks",
+    "title": "Introduction to causality in epidemiology",
+    "section": "DAGs’ building blocks",
+    "text": "DAGs’ building blocks\n\nDAGs are made of 3 types of basic building blocks\n\n\n\n\n\nChain\n\n\n\n\n\n\n\n\nFork\n\n\n\n\n\n\n\n\nCollider\n\n\n\n\n\n\n\n\n\n\nThese structures are important to identify for study design and causal inference"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#back-to-bovid-19",
+    "href": "intro_causality_manimal.html#back-to-bovid-19",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Back to Bovid-19",
+    "text": "Back to Bovid-19\n\n\n\nIn epidemiological terms\n\n\\(Y\\) (death) is the outcome of interest\n\\(A\\) (treatment) is the exposure of interest\n\\(X\\) (age) is a confounder \\(\\rightarrow\\) \\(X\\) has a causal effect on both the outcome and the exposure.\n\nIn other words, age is a confounder because it is both a prognostic factor and is used to determine treatment allocation.\n\n\n\n\n\n\n\n\n\n\nIn causal language:\n\n\\(E(Y_i^{A=1}|A_i=0) \\neq E(Y_i^{A=1}|A_i=1)\\) and\n\\(E(Y_i^{A=0}|A_i=0) \\neq E(Y_i^{A=0}|A_i=1)\\)"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#exchangeability",
+    "href": "intro_causality_manimal.html#exchangeability",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Exchangeability",
+    "text": "Exchangeability\n\nIf we want to be able to make valid causal inference, we need to ensure that:\n\n\\(E(Y_i^{A=1}|A_i=0) = E(Y_i^{A=1}|A_i=1)\\) and\n\\(E(Y_i^{A=0}|A_i=0) = E(Y_i^{A=0}|A_i=1)\\)\n\nThis can also be phrased as: treatment allocation needs to be conditionally independent of the outcome\n\n\\(Y_i^{A} \\perp\\!\\!\\!\\perp A_i\\)\n\nThis is called exchangeability\nCan you propose a strategy for obtaining exchangeability?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#randomised-experiments",
+    "href": "intro_causality_manimal.html#randomised-experiments",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Randomised experiments",
+    "text": "Randomised experiments\n\nRandomisation is the best way to make data exchangeable\nPrinciple: use chance to allocate the different treatments being compared (including placebo)\n\nThis leads to \\(A_i \\perp\\!\\!\\!\\perp X_i\\) and therefore \\(Y_i^{A} \\perp\\!\\!\\!\\perp A_i\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis is the basis for randomised controlled trials used to evaluate treatment efficacy"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#randomised-experiments---exercise",
+    "href": "intro_causality_manimal.html#randomised-experiments---exercise",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Randomised experiments - exercise",
+    "text": "Randomised experiments - exercise\n\n\n\n\n\n\n\nExercise\n\n\n\nIn the file bovid19_2.xlsx\nPropose/try an approach to randomly allocate treatment\nFrom the randomly allocated treatments, calculate an ATE\nIs your estimation better than the one obtained from the observed data?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#observational-studies-motivation-definition-and-challenges.",
+    "href": "intro_causality_manimal.html#observational-studies-motivation-definition-and-challenges.",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Observational studies: motivation, definition and challenges.",
+    "text": "Observational studies: motivation, definition and challenges.\n\nIt is not always possible to conduct randomised experiments\n\ne.g. not ethical to randomly allocate people to smoking/non smoking\n\nNon experimental data used to make causal inference\n\ne.g. Bovid-19 data\n\nObservational study: study in which the exposure(s) is not determined by the researchers\nCausal inference from observational data is hard and carries potential sources of bias\nMethods have been developed to mitigate the risk of bias in such studies\nMost methods rely on the prior construction of DAGs from the scientific literature or expert opinion"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#matching-to-address-confounding",
+    "href": "intro_causality_manimal.html#matching-to-address-confounding",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Matching to address confounding",
+    "text": "Matching to address confounding\n\nAim: make exposure (treatment) conditionally independent from outcome \\(\\rightarrow Y_i^{A=a} \\perp\\!\\!\\!\\perp A_i | X_i\\)\nPrinciple:\n\nmatch every treated individual with an untreated individual with the same characteristics\nmodel/compare the expected values of the outcome in treated and untreated of the matched sample"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#inverse-probability-weighting-ipw-to-address-confounding",
+    "href": "intro_causality_manimal.html#inverse-probability-weighting-ipw-to-address-confounding",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Inverse probability weighting (IPW) to address confounding",
+    "text": "Inverse probability weighting (IPW) to address confounding\n\nAim: make exposure (treatment) conditionally independent from outcome \\(\\rightarrow Y_i^{A=a} \\perp\\!\\!\\!\\perp A_i | X_i\\)\nPrinciple:\n\nweight each observation by the inverse of its probability of exposure (treatment)\nmodel/compare the expected value of the outcome using the weighted observations"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#propensity-scores-for-matching-and-ipw",
+    "href": "intro_causality_manimal.html#propensity-scores-for-matching-and-ipw",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Propensity scores for matching and IPW",
+    "text": "Propensity scores for matching and IPW\n\nPropensity scores are individual probabilities of exposure (treatment) predicted from models\nConsider the following DAG:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can use logistic regression to model the probability of treatment:\n\n\\(ln(\\frac{p(A_i)}{1 - p(A_i)}) = \\beta_0 + \\beta_1 X1_i + \\beta_2 X2_i\\)\nthen \\(p(A_i)\\) can be predicted for each \\(i\\) from the observed \\(X1_i\\) and \\(X2_i\\)\n\nModels other than logistic regression can also be used"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#mediation-analysis-1",
+    "href": "intro_causality_manimal.html#mediation-analysis-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Mediation analysis (1)",
+    "text": "Mediation analysis (1)\n\nConsider the following DAG:\n\n\n\n\n\n\n\n\n\n\n\n\n\nIf we are interested in the causal effect of \\(A\\) on \\(Y\\), we do not have to care about \\(X\\)\n\nThe path from \\(X\\) to \\(Y\\) is blocked by \\(A\\)"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#mediation-analysis-2",
+    "href": "intro_causality_manimal.html#mediation-analysis-2",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Mediation analysis (2)",
+    "text": "Mediation analysis (2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConsider the DAG on the left\nIf we are interested in the causal effect of \\(A\\) on \\(Y\\), we can:\n\nLook at the total effect of \\(A\\) on \\(Y\\) by modelling \\(Y\\) as a function of \\(A\\) only\nBreak down the effect of \\(A\\) on \\(Y\\) into a direct effect and an effect of \\(A\\) mediated through \\(X\\)\n\n\n\n\n\nThis is called mediation analysis"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#collider-bias",
+    "href": "intro_causality_manimal.html#collider-bias",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Collider bias",
+    "text": "Collider bias\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConsider the DAG on the left\nIf we are interested in the causal effect of \\(A\\) on \\(Y\\), we should not include \\(X\\) in our analysis\n\n\\(X\\) is a collider\nIncluding a collider in an analysis will result in a spurious correlation between \\(A\\) and \\(Y\\)"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#dagitty-1",
+    "href": "intro_causality_manimal.html#dagitty-1",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Dagitty",
+    "text": "Dagitty\n\nDagitty is a tool for creating, editing, and analyzing causal diagrams\n\nAvailable as a website (https://www.dagitty.net/) and an R package\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nUse the Dagitty to create a DAG for a phenomenon of your choice\nWhat data should you collect?\nHow would you analyse your data?"
+  },
+  {
+    "objectID": "intro_causality_manimal.html#take-home-messages",
+    "href": "intro_causality_manimal.html#take-home-messages",
+    "title": "Introduction to causality in epidemiology",
+    "section": "Take home messages",
+    "text": "Take home messages\n\nIdentifying causal relationships from observational data is hard\nThis requires the formulation of hypotheses based on scientific literature or expert opinion.\nThese hypotheses should be structured into a DAG\nThe DAG should guide data collection and analysis\nA limited number of rules exist to identify the variables (not) to include in the analysis and how to interpret the results"
+  }
+]

@@ -1,0 +1,14 @@
+/*-- scss:defaults --*/
+$presentation-h1-font-size: 2em;
+
+$presentation-font-size-root: 30px;
+
+.reveal .slide-logo {
+  display: block !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  max-height: 8% !important;
+  height: 10% !important;
+  width: auto !important;
+}

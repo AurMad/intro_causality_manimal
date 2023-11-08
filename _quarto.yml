@@ -1,0 +1,5 @@
+project:
+  title: "intro_causality_manimal"
+  type: website
+  output-dir: docs
+
