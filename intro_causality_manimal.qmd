@@ -779,7 +779,7 @@ ggdag(dag_bovid19_collider) +
 ::: fragment
 ::: {.callout-note appearance="simple"}
 ## Exercise
-- Use the Dagitty to create a DAG for a phenomenon of your choice
+- Use the Dagitty website to create a DAG for a phenomenon of your choice
 - What data should you collect?
 - How would you analyse your data?
 :::

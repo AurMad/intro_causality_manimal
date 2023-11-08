@@ -249,7 +249,7 @@
     "href": "intro_causality_manimal.html#dagitty-1",
     "title": "Introduction to causality in epidemiology",
     "section": "Dagitty",
-    "text": "Dagitty\n\nDagitty is a tool for creating, editing, and analyzing causal diagrams\n\nAvailable as a website (https://www.dagitty.net/) and an R package\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nUse the Dagitty to create a DAG for a phenomenon of your choice\nWhat data should you collect?\nHow would you analyse your data?"
+    "text": "Dagitty\n\nDagitty is a tool for creating, editing, and analyzing causal diagrams\n\nAvailable as a website (https://www.dagitty.net/) and an R package\n\n\n\n\n\n\n\n\n\nExercise\n\n\n\nUse the Dagitty website to create a DAG for a phenomenon of your choice\nWhat data should you collect?\nHow would you analyse your data?"
   },
   {
     "objectID": "intro_causality_manimal.html#take-home-messages",
